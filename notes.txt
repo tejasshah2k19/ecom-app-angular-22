@@ -1,0 +1,71 @@
+npm install @angular/cli 
+
+ng --version 
+
+ng new ecomapp 
+
+
+cd ecomapp 
+
+
+ng s --o 
+
+
+http://localhost:4200 
+
+index.html --> app.component.html --> remove all the html content 
+		add add <router-outlet></router-outlet> 
+
+
+routes --> urls 
+
+component --> .ts 
+
+
+ng g c signup
+
+ng g c login 
+
+app.routing.module.ts --> routes 
+		routes = [
+			{}
+		] 
+
+routes - login signup 
+
+
+
+lib --> FormsModule
+
+app.module.ts 
+
+
+component -->  bind ---> html 
+two way databinding 
+banana syntax 
+
+
+create service 
+
+ng g s session 
+
+api calling --> HttpClient  -> REST api -> GET POST PUT DELETE 
+
+app.module.ts ==> HttpClientModule 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
