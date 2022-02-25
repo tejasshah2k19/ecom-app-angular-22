@@ -18,13 +18,14 @@ export class SignupComponent implements OnInit {
   }
 
   saveuser(){
-    console.log(this.firstName);
-    console.log(this.email);
-    console.log(this.password);
-  
-    let user = { "firstName":this.firstName,"email":this.email,"password":this.password}
-    this.sessionService.saveUser(user)
-     
+   
+    let user = { "firstName":this.firstName,"email":this.email,"password":this.password,"role":"620dda273e406e1014a29e24"}
+    this.sessionService.saveUser(user).subscribe(resp=>{
+      console.log(resp);
+      
+    })
+
+      
   }
 
 }
