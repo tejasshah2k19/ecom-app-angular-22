@@ -13,4 +13,9 @@ export class RoleService {
   addRole(role:any):Observable<any>{
    return this.hc.post("http://localhost:3000/roles",role)
   }
+
+
+  getAllRoles():Observable<any>{
+    return this.hc.get("http://localhost:3000/roles")
+  }
 }

@@ -1,0 +1,20 @@
+<app-admin-header></app-admin-header>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>RoleId</th>
+            <th>RoleName</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr  *ngFor="let role of roles">
+                <td>{{role._id}}</td>
+                <td>{{role.roleName}}</td>
+                <tD>Edit | Delete</tD> 
+            </tr>
+    </tbody>
+
+
+</table>
