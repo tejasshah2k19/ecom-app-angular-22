@@ -53,6 +53,46 @@ api calling --> HttpClient  -> REST api -> GET POST PUT DELETE
 
 app.module.ts ==> HttpClientModule 
 
+-----------------------------------------------
+
+
+1) ng g c admin/admin-header
+2) <app-admin-heade> ==> add addrole list role -- html 
+
+
+list role api 
+1)ng g c admin/list-role 
+2)roleservice --> getAllRoles() apiCall function 
+3)list-role component 
+		 constructor(private roleService:RoleService) { }
+			ngoninit --> roleService-->getAllRoles()
+			instance -> roles : Array<any> --resp.data 
+
+
+navigate 
+
+Router 
+	router.navigateByUrl("/listrole")
+
+
+
+
+npmjs toastr ---> google 
+
+
+-------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+	
+	
 
 
 
