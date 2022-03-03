@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { RoleService } from '../role.service';
 
@@ -10,7 +11,11 @@ import { RoleService } from '../role.service';
 export class ListRoleComponent implements OnInit {
 
   roles:Array<any> = []
-  constructor(private roleService:RoleService,private tsService:ToastrService) { }
+  constructor(private roleService:RoleService,private tsService:ToastrService,private router:Router) {
+    console.log("list roles ");
+    
+
+   }
 
   ngOnInit(): void {
           this.getAllRoles()
@@ -28,6 +33,9 @@ export class ListRoleComponent implements OnInit {
         })
   }
 
+  editRole(roleId:any){
+    this.router.navigateByUrl("/editrole/"+roleId)
+  }
 
   getAllRoles(){
     this.roleService.getAllRoles().subscribe(resp=>{
@@ -35,4 +43,6 @@ export class ListRoleComponent implements OnInit {
        this.roles =  resp.data 
     }) 
   }
+
+
 }
