@@ -8,7 +8,7 @@ import { SignupComponent } from './signup/signup.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AddRoleComponent } from './admin/add-role/add-role.component';
-import { AdminHeaderComponent } from './admin-header/admin-header.component';
+import { AdminHeaderComponent } from './admin/admin-header/admin-header.component';
 import { ListRoleComponent } from './admin/list-role/list-role.component';
 import { AddCategoryComponent } from './admin/add-category/add-category.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';

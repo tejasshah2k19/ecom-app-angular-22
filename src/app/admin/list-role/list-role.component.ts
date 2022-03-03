@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { RoleService } from '../role.service';
 
 @Component({
@@ -9,13 +10,29 @@ import { RoleService } from '../role.service';
 export class ListRoleComponent implements OnInit {
 
   roles:Array<any> = []
-  constructor(private roleService:RoleService) { }
+  constructor(private roleService:RoleService,private tsService:ToastrService) { }
 
   ngOnInit(): void {
-           this.roleService.getAllRoles().subscribe(resp=>{
-             console.log(resp);
-              this.roles =  resp.data 
-           }) 
+          this.getAllRoles()
   }
 
+
+  deleteRole(roleId:any){
+        this.roleService.deleteRole(roleId).subscribe(resp=>{
+          if(resp.status == 200 ){
+              this.tsService.success("",resp.msg,{timeOut:3000});
+              this.getAllRoles() 
+          }else{
+            this.tsService.error("",resp.msg,{timeOut:3000})
+          }
+        })
+  }
+
+
+  getAllRoles(){
+    this.roleService.getAllRoles().subscribe(resp=>{
+      console.log(resp);
+       this.roles =  resp.data 
+    }) 
+  }
 }

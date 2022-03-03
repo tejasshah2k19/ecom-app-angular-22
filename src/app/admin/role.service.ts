@@ -18,4 +18,8 @@ export class RoleService {
   getAllRoles():Observable<any>{
     return this.hc.get("http://localhost:3000/roles")
   }
+
+  deleteRole(roleId:any):Observable<any>{
+    return this.hc.delete("http://localhost:3000/roles/"+roleId)
+  }
 }

@@ -12,7 +12,7 @@
         <tr  *ngFor="let role of roles">
                 <td>{{role._id}}</td>
                 <td>{{role.roleName}}</td>
-                <tD>Edit | Delete</tD> 
+                <tD>Edit | <button   (click)="deleteRole(role._id)" >  Delete</button></tD> 
             </tr>
     </tbody>
 
