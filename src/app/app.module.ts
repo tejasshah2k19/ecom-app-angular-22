@@ -14,6 +14,9 @@ import { AddCategoryComponent } from './admin/add-category/add-category.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { EditRoleComponent } from './admin/edit-role/edit-role.component';
+import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+import { VendorDashboardComponent } from './vendor/vendor-dashboard/vendor-dashboard.component';
+import { AddUserComponent } from './admin/add-user/add-user.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { EditRoleComponent } from './admin/edit-role/edit-role.component';
     AdminHeaderComponent,
     ListRoleComponent,
     AddCategoryComponent,
-    EditRoleComponent
+    EditRoleComponent,
+    AdminDashboardComponent,
+    VendorDashboardComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,
