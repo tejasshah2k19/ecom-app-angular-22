@@ -1,10 +1,57 @@
-<h2>Login</h2>
+<div class="
+      auth-wrapper
+      d-flex
+      no-block
+      justify-content-center
+      align-items-center
+      bg-dark
+    " style="height: 100%;">
+  <div class="auth-box bg-dark border-top border-secondary">
+    <div id="loginform">
+      <div class="text-center pt-3 pb-3">
+        <span class="" style="color: white;font-size: 25px;font-family: Verdana, Geneva, Tahoma, sans-serif;">
+          eCom</span>
+      </div>
+      <!-- Form -->
+      <div class="row pb-4">
+        <div class="col-12">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-success text-white h-100" id="basic-addon1"><i
+                  class="mdi mdi-account fs-4"></i></span>
+            </div>
+            <input type="text" [(ngModel)]="email" class="form-control form-control-lg" placeholder="Email"
+              aria-label="Email" aria-describedby="basic-addon1" required="" />
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-warning text-white h-100" id="basic-addon2"><i
+                  class="mdi mdi-lock fs-4"></i></span>
+            </div>
+            <input type="password" class="form-control form-control-lg" placeholder="Password" aria-label="Password"
+              [(ngModel)]="password" aria-describedby="basic-addon1" required="" />
+          </div>
+        </div>
+      </div>
+      <div class="row border-top border-secondary">
+        <div class="col-12">
+          <div class="form-group">
+            <div class="pt-3">
+              <a style="color: white;" routerLink="/forgetpassword">
+              <button class="btn btn-info" id="to-recover" type="button">
+                <i class="mdi mdi-lock fs-4 me-1"></i>  Lost password? 
+              </button>
+            </a>
+              <button class="btn btn-success float-end text-white" type="button" (click)="login()">
+                Login
+              </button>
+            </div>
+            <br>
+            <span><a style="color: white;" routerLink="/signup"> New User?</a></span>
+          </div>
+        </div>
+      </div>
 
-Email  :  <input type="text"  [(ngModel)]="email" /><br><br>
-
-Password : <input type="password"  [(ngModel)]="password"  /><br><br>
-
-<input type="button" value="Login"   (click)="login()" />
-<br>
-
-<a routerLink="/signup">Signup</a>
+    </div>
+      </div>
+</div>

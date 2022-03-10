@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class AdminDashboardComponent implements OnInit {
 
   constructor() { }
-
+  firstName:string = ""
   ngOnInit(): void {
+    this.firstName = localStorage.getItem("firstName")
   }
 
 }

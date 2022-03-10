@@ -28,4 +28,8 @@ export class SessionService {
       return this.httpClient.post("http://localhost:3000/savecustomer",user)
       
     }
+
+    sendOtpForPassword(user:any):Observable<any>{
+      return this.httpClient.post("http://localhost:3000/sendotpforpassword",user)
+    }
   }

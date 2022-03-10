@@ -17,6 +17,12 @@ import { EditRoleComponent } from './admin/edit-role/edit-role.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { VendorDashboardComponent } from './vendor/vendor-dashboard/vendor-dashboard.component';
 import { AddUserComponent } from './admin/add-user/add-user.component';
+import { AdminSidebarComponent } from './admin/admin-sidebar/admin-sidebar.component';
+import { AdminFooterComponent } from './admin/admin-footer/admin-footer.component';
+import { AdminComponent } from './admin/admin/admin.component';
+import { LogoutComponent } from './logout/logout.component';
+import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +36,13 @@ import { AddUserComponent } from './admin/add-user/add-user.component';
     EditRoleComponent,
     AdminDashboardComponent,
     VendorDashboardComponent,
-    AddUserComponent
+    AddUserComponent,
+    AdminSidebarComponent,
+    AdminFooterComponent,
+    AdminComponent,
+    LogoutComponent,
+    ForgetpasswordComponent,
+    ChangepasswordComponent
   ],
   imports: [
     BrowserModule,

@@ -23,8 +23,13 @@ export class LoginComponent implements OnInit {
       if (resp.status == 200) {
         this.tsService.success("", resp.msg, { timeOut: 3000 })
         // console.log(resp);
+       
+        localStorage.setItem("userId",resp.data._id)
+        localStorage.setItem("firstName",resp.data.firstName)
+        
+
         if (resp.data.role.roleName.toLowerCase() == "admin") { 
-          this.router.navigateByUrl("/admin-dashboard")
+          this.router.navigateByUrl("/admin/admin-dashboard")
         } else if (resp.data.role.roleName.toLowerCase() == "customer") {
 
           this.router.navigateByUrl("/home")

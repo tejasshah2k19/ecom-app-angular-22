@@ -1,20 +1,56 @@
-<app-admin-header></app-admin-header>
+<div class="page-breadcrumb">
+    <div class="row">
+        <div class="col-12 d-flex no-block align-items-center">
+            <h4 class="page-title">Dashboard</h4>
+            <div class="ms-auto text-end">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a routerLink="/admin/admin-dashboard">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            List Role
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
 
-<table border="1">
-    <thead>
-        <tr>
-            <th>RoleId</th>
-            <th>RoleName</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr  *ngFor="let role of roles">
-                <td>{{role._id}}</td>
-                <td>{{role.roleName}}</td>
-                <tD><button  (click)="editRole(role._id)" >Edit</button>   | <button   (click)="deleteRole(role._id)" >  Delete</button></tD> 
-            </tr>
-    </tbody>
+<br>
 
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">List Role</h5>
+                   
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table id="listrole" class="table table-striped"
+                                        role="grid" aria-describedby="zero_config_info">
+                                        <thead>
+                                            <tr role="row">
+                                                <th>Index</th>
+                                                <th>Role Name</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr  *ngFor="let role of roles;let i=index">
+                                                <td>{{i+1}}</td>
+                                                <td>{{role.roleName}}</td>
+                                                <tD><button  (click)="editRole(role._id)" >Edit</button>   | <button   (click)="deleteRole(role._id)" >  Delete</button></tD> 
+                                            </tr>
+                                        </tbody>
 
-</table>
+                                    </table>
+                                </div>
+                            </div>
+ 
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div> <!-- container fluid-->
